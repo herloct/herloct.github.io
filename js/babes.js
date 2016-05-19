@@ -5,7 +5,8 @@ function addNewPost(media, content)
 
     updates['/posts/' + newPostKey] = {
         media: media,
-        content: content
+        content: content,
+        posted_at: new Date()
     };
 
     return firebase.database().ref().update(updates);
